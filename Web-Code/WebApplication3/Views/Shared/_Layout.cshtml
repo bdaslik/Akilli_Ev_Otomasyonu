@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>@ViewBag.Title</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.6 -->
+    
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link href="~/Content/css/AdminLTE.min.css" rel="stylesheet" />
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+    <link href="~/Content/css/_all-skins.min.css" rel="stylesheet" />
+    <!-- iCheck -->
+   
+    <link href="~/Content/css/blue.css" rel="stylesheet" />
+    <!-- Morris chart -->
+    <link href="~/Content/css/morris.css" rel="stylesheet" />
+    <!-- jvectormap -->
+   
+    <link href="~/Content/css/jquery-jvectormap-1.2.2.css" rel="stylesheet" />
+    <!-- Date Picker -->
+    <link href="~/Content/css/daterangepicker.css" rel="stylesheet" />
+    <!-- bootstrap wysihtml5 - text editor -->
+    
+    <link href="~/Content/css/bootstrap3-wysihtml5.min.css" rel="stylesheet" />
+   
+    <script src="~/Scripts/js/jquery-2.2.3.min.js"></script>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+</head>
+
+
+<body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="~/Home/Index" class="logo">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <span class="logo-mini"><b>BE</b>H</span>
+                <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg"><b>BE </b>Home</span>
+            </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <!-- Sağ Kullanıcı Paneli -->
+                        <li class="dropdown user user-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <img src="~/Content/img/Profile-160x160.png" class="user-image" alt="User Image">
+                                <span class="hidden-xs">Bervan Daşlık</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!-- User image -->
+                                <li class="user-header">
+                                    <img src="~/Content/img/Profile-160x160.png" class="img-circle" alt="User Image">
+                                    <p>
+                                        Bervan Daşlık - IoT & Web Developer
+                                        <small>Sakarya Üniversitesi</small>
+                                    </p>
+                                </li>
+                              
+                               
+                        <!-- Control Sidebar Toggle Button -->
+                        <li>
+                            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+                <!-- Kullanıcı Paneli -->
+                <div class="user-panel">
+                    <div class="pull-left image">
+                        <img src="~/Content/img/Profile-160x160.png" class="img-circle" alt="User Image">
+                    </div>
+                    <div class="pull-left info">
+                        <p>Bervan Daşlık</p>
+                        <a href="#"><i class="fa fa-circle text-success"></i> Çevrimiçi</a>
+                    </div>
+                </div>
+             
+                <!-- sidebar menu: : menü içeriği  -->
+                <ul class="sidebar-menu">
+                    <li class="header">Ana Menü</li>
+                    <li class="active treeview">
+                        <a href="~/Home/Index">
+                            <i class="fa fa-dashboard"></i> <span>Genel Görünüm</span>
+                        </a>
+
+                    </li>
+                    <li class="treeview">
+                        <a href="~/Kayit/Index">
+                            <i class="fa fa-files-o"></i>
+                            <span>Eve Giriş Kayıtları</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="~/Sicaklik/Index">
+                            <i class="fa fa-th"></i> <span>Sıcaklık ve Nem</span>
+                        </a>
+                    </li>
+                    <li class="treeview">
+                        <a href="~/Mesafe/Index">
+                            <i class="fa fa-pie-chart"></i>
+                            <span>Kapı Mesafesi</span>
+                        </a>
+                    </li>
+                    <li class="treeview">
+                        <a href="~/Gaz/Index">
+                            <i class="fa fa-laptop"></i>
+                            <span>Gaz Sensörü</span>
+                        </a>
+                    </li>
+                    <li class="treeview">
+                        <a href="~/Su/Index">
+                            <i class="fa fa-edit"></i> <span>Su Seviye</span>
+                        </a>
+                    </li>
+  
+                    <li>
+                        <a href="~/LDR/Index">
+                            <i class="fa fa-calendar"></i> <span>LDR Işık Seviyesi</span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <h1>
+                    <small>Yönetim Paneli</small>
+
+                </h1>
+                @RenderBody()
+            </section>
+
+        </div>
+        <!-- /.content-wrapper -->
+        <footer class="main-footer">
+            <div class="pull-right hidden-xs">
+                <b>Version</b> 1.0.0
+            </div>
+            <strong>Copyright &copy; 2017 <a href="#">BE Otomasyon</a>.</strong> Tüm Hakları Saklıdır.
+        </footer>
+
+        
+    </div>
+    <!-- ./wrapper -->
+
+
+
+    
+    <script src="~/Scripts/js/jquery-2.2.3.min.js"></script>
+    <script>
+  $.widget.bridge('uibutton', $.ui.button);
+    </script>
+    <!-- Bootstrap 3.3.6 -->
+    <script src="~/Scripts/js/bootstrap.min.js"></script>
+    <!-- Morris.js charts -->
+    
+    <script src="~/Scripts/js/raphael-min.js"></script>
+    <script src="~/Scripts/js/morris.min.js"></script>
+    <!-- Sparkline -->
+    <script src="~/Scripts/js/jquery.sparkline.min.js"></script>
+    <!-- jvectormap -->
+    <script src="~/Scripts/js/jquery-jvectormap-1.2.2.min.js"></script>
+    <script src="~/Scripts/js/jquery-jvectormap-world-mill-en.js"></script>
+    <!-- jQuery Knob Chart -->
+    <script src="~/Scripts/js/jquery.knob.js"></script>
+    <!-- daterangepicker -->
+
+    <script src="~/Scripts/js/moment.min.js"></script>
+    <script src="~/Scripts/js/daterangepicker.js"></script>
+    <!-- datepicker -->
+    <script src="~/Scripts/js/bootstrap-datepicker.js"></script>
+    <!-- Bootstrap WYSIHTML5 -->
+    <script src="~/Scripts/js/bootstrap3-wysihtml5.all.min.js"></script>
+    <!-- Slimscroll -->
+    <script src="~/Scripts/js/jquery.slimscroll.min.js"></script>
+    <!-- FastClick -->
+    <script src="~/Scripts/js/fastclick.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="~/Scripts/js/app.min.js"></script>
+    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+    <script src="~/Scripts/js/dashboard.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="~/Scripts/js/demo.js"></script>
+
+    <script src="~/Scripts/js/jquery.flot.min.js"></script>
+    <script src="~/Scripts/js/jquery.flot.pie.min.js"></script>
+    <script src="~/Scripts/js/jquery.flot.resize.js"></script>
+    <script src="~/Scripts/js/jquery.flot.categories.js"></script>
+
+</body>
+</html>

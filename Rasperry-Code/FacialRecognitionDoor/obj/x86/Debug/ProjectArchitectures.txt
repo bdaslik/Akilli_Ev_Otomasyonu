@@ -1,0 +1,1 @@
+C:\Users\Enis\Desktop\Facial-Recognition-Door-develop\FacialRecognitionDoor\FacialRecognitionDoor.csproj;x86

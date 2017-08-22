@@ -1,0 +1,72 @@
+﻿
+@{
+    ViewBag.Title = "Ev Giriş Kayıtları - BE Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title">Ev Giriş Kayıtları</h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body" >
+                    <div id="tablo">
+
+                    </div>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+
+</div>
+
+<script src="~/Scripts/js/dataTables.bootstrap.min.js"></script>
+<script src="~/Scripts/js/jquery.dataTables.min.js"></script>
+<script src="~/Scripts/js/jquery.slimscroll.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        var div = document.getElementById('tablo');
+        var HTML = '<table id="example2" class="table table-bordered table-hover"><thead><tr><th>ID</th><th>Kullanıcı</th><th>Giriş Zamanı</th></tr> </thead><tbody>';
+        
+        $.getJSON('https://api.thingspeak.com/channels/275360/fields/7.json?results=50000', null, function (data) {
+            $.each(data.feeds, function (i, item) {
+                if (item.field7 != null) {
+                    
+                    HTML += '<tr><td>' + item.entry_id + '</td><td>' + item.field7 + '</td><td>' + item.created_at + '</td></tr>';
+                }
+            });
+
+            HTML+= '</tbody>  <tfoot><tr><th>ID</th><th>Kullanıcı</th><th>Giriş Zamanı</th></tr> </tfoot> </table>';
+            div.innerHTML = HTML;
+        });
+        
+
+    });
+
+
+</script>
+
+<script>
+  $(function () {
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false
+    });
+  });
+</script>
+
+
+

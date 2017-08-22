@@ -1,0 +1,71 @@
+﻿
+@{
+    ViewBag.Title = "Anasayfa";
+}
+
+
+<div class="row">
+
+    <div class="col-md-6">
+        <!-- Sıcaklık -->
+        <div class="box box-primary">
+            <div class="box-header with-border">
+                    <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/275360/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=S%C4%B1cakl%C4%B1k&type=spline&xaxis=Zaman"></iframe>
+            </div>
+        </div>
+        <!-- /.box -->
+    </div>
+
+    <div class="col-md-6">
+        <!-- Nem -->
+        <div class="box box-primary">
+            <div class="box-header with-border">
+                <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/275360/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&yaxis=Zaman&title=Nem"></iframe>
+            </div>
+        </div>
+        <!-- /.box -->
+    </div>
+
+    <div class="col-md-6">
+        <!--Işık Seviyesi -->
+        <div class="box box-primary">
+            <div class="box-header with-border">
+                <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/275360/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=I%C5%9F%C4%B1k+Seviyesi%28LDR%29&type=line&xaxis=Zaman"></iframe>
+            </div>
+        </div>
+        <!-- /.box -->
+    </div>
+
+    <div class="col-md-6">
+        <!--Kapı Mesafe -->
+        <div class="box box-primary">
+            <div class="box-header with-border">
+                <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/275360/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Kap%C4%B1+Mesafe&type=line&xaxis=Zaman"></iframe>
+            </div>
+        </div>
+        <!-- /.box -->
+    </div>
+   
+    <div class="col-md-6">
+        <!--Gaz Sensörü -->
+        <div class="box box-primary">
+            <div class="box-header with-border">
+                <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/275360/charts/5?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Gaz+Seviyesi&type=line&xaxis=Zaman"></iframe>
+            </div>
+        </div>
+        <!-- /.box -->
+    </div>
+
+    <div class="col-md-6">
+        <!--Gaz Sensörü -->
+        <div class="box box-primary">
+            <div class="box-header with-border">
+                <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/275360/charts/6?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Su+Seviye+%C3%96l%C3%A7er&type=line&xaxis=Zaman"></iframe>
+            </div>
+        </div>
+        <!-- /.box -->
+    </div>
+
+
+</div>
+
